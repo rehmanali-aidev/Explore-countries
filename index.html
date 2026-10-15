@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/main.js"></script>
+  <title>Country Explorer</title>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Country Explorer</h1>
+    <p>Search, filter, and sort countries from around the world.</p>
+  </header>
+  <main>
+    <section class="controls" aria-label="Search and filters">
+      <div class="field">
+        <label for="search-input">Search</label>
+        <input id="search-input" type="search" placeholder="Search countries" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="region-select">Region</label>
+        <select id="region-select">
+          <option value="alll">All regions</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="sort-select">Sort by</label>
+        <select id="sort-select">
+          <option value="name-asc">Name A-Z</option>
+          <option value="population-desc">Population high to low</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Statistics">
+      <p>Showing <strong id="stat-count">0</strong> countries</p>
+      <p>Total population <strong id="stat-population">0</strong></p>
+    </section>
+
+    <p id="status" role="status"></p>
+
+    <ul id="country-list" class="country-grid"></ul>
+  </main>
+</body>
+</html>
